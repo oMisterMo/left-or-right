@@ -19,9 +19,16 @@ body {
     align-items: center;
 }
 
+.content {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .title-container {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
