@@ -19,15 +19,15 @@
     </div>
     <!-- The Content -->
     <div class="choices-container">
-        <div class="btn-img">
-            <button class="button btn-main" type="button">
+        <div id="main-img" class="btn-img">
+            <button class="button btn-main" type="button" onclick="clickImg()">
                 <img src="./assets/left.png" alt="" width="400" height=400"/>
             </button>
         </div>
 
         <div class="btn-choice-container">
-            <button id="left-btn" class="button btn-choice" type="button"></button>
-            <button id="right-btn" class="button btn-choice" type="button"></button>
+            <button id="left-btn" class="button btn-choice" type="button" onclick="clickLeft()"></button>
+            <button id="right-btn" class="button btn-choice" type="button" onclick="clickRight()"></button>
         </div>
     </div>
 </div>
