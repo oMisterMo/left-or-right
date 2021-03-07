@@ -16,14 +16,18 @@
 </head>
 <body>
 <div class="container">
+    <div class="header">
+<!--        <p>Welcome to the jungle</p>-->
+    </div>
 
     <div class="content">
         <!-- The Title -->
         <div class="title-container">
-            <h1 id="title"></h1>    <!-- javascript is used to set the innerText -->
+            <!-- javascript is used to set the innerText of the title -->
+            <h1 id="title"></h1>
         </div>
         <!-- The Content -->
-        <div id="main-img-container" class="img-btn"> <!-- Animation gets added here -->
+        <div id="main-img-container" class="img-btn"> <!-- Animation gets added to the main-img-container class -->
             <button class="button main-btn" type="button" onclick="clickImg()">
                 <img id="main-img" src="./assets/left.png" alt=""/>
             </button>
@@ -34,8 +38,19 @@
             <button id="right-btn" class="button btn-choice" type="button" onclick="clickRight(this)"></button>
         </div>
     </div>
-
+    <div class="fixed-btn">
+        <a href="https://www.buymeacoffee.com/oMisterMo">
+            <img class="fixed-btn-img" src="./assets/logo.png" alt="Support Logo" width="40" height="40" />
+        </a>
+<!--        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button"-->
+<!--                data-slug="oMisterMo" data-color="#FFDD00" data-emoji="🍕" data-font="Cookie" data-text="Buy me a pizza"-->
+<!--                data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff"></script>-->
+    </div>
+    <div class="footer">
+        <p>The Copyright Symbol © is not mandatory to use in the European Union law.</p>
+    </div>
 </div>
+
 <script src="./js/index.js"></script>
 </body>
 </html>
