@@ -10,6 +10,9 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="./css/index.css">
+
+    <!-- Javascript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.12.0/underscore-min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -20,15 +23,15 @@
             <h1 id="title"></h1>    <!-- javascript is used to set the innerText -->
         </div>
         <!-- The Content -->
-        <div id="main-img" class="btn-img">
-            <button class="button btn-main" type="button" onclick="clickImg()">
-                <img src="./assets/left.png" alt="" width="400" height=400"/>
+        <div id="main-img-container" class="img-btn"> <!-- Animation gets added here -->
+            <button class="button main-btn" type="button" onclick="clickImg()">
+                <img id="main-img" src="./assets/left.png" alt=""/>
             </button>
         </div>
 
         <div class="btn-choice-container">
-            <button id="left-btn" class="button btn-choice" type="button" onclick="clickLeft()"></button>
-            <button id="right-btn" class="button btn-choice" type="button" onclick="clickRight()"></button>
+            <button id="left-btn" class="button btn-choice" type="button" onclick="clickLeft(this)"></button>
+            <button id="right-btn" class="button btn-choice" type="button" onclick="clickRight(this)"></button>
         </div>
     </div>
 

@@ -43,7 +43,13 @@ body {
     transition: 0.5s;
 }
 
-.btn-main, img{
+#main-img {
+    display: block;
+    width: 400px;
+    height: 400px;
+}
+
+.main-btn, img{
     border-radius: 50%; /* Overrides .button radius */
 }
 
@@ -58,7 +64,7 @@ body {
     justify-content: space-evenly;
 }
 
-.btn-img {
+.img-btn {
     padding: 10px;
 }
 
@@ -72,10 +78,19 @@ body {
     /*animation-direction: alternate;*/
 }
 
+.btn-img-anim-revel {
+    animation: rotate2 2s normal;
+    animation-direction: normal;
+}
+
 .btn-choice {
     width: 150px;
     height: 60px;
     font-size: 20px;
+}
+
+.btn-focus {
+    background-color: goldenrod;
 }
 
 .choices-container{
@@ -116,3 +131,14 @@ body {
         transform: rotateY(1440deg);
     }
 }
+
+@keyframes rotate2 {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Media Queries */
