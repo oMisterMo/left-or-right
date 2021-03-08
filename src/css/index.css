@@ -98,7 +98,7 @@
     background-color: goldenrod;
 }
 
-.choices-container{
+.choices-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,7 +110,7 @@
     bottom: 0;
     right: 0;
     padding: 30px;
-    z-index: 100;   /* Otherwise hover acts funky */
+    z-index: 100; /* Otherwise hover acts funky g*/
     transition: .1s all linear;
 }
 

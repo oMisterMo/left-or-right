@@ -25,15 +25,14 @@ console.log("right btn", rightBtn);
 // setUpAnimationEnd2();
 
 
-
-function clickImg(){
+function clickImg() {
     //Wait until a user picked a choice.
-    if(picked === EMPTY_CHOICE)  return;
+    if (picked === EMPTY_CHOICE) return;
 
     const element = document.getElementById("main-img-container");
 
     //reset transition by removing class and re-adding
-    element.addEventListener("click", function(e){
+    element.addEventListener("click", function (e) {
         e.preventDefault();
 
         element.classList.remove("btn-img-anim");
@@ -44,13 +43,13 @@ function clickImg(){
 
     //Reveal Image just before 3s animation ends (hard coded)
     console.log("going to reveal image in 2.7 seconds...");
-    setTimeout(setImage,2700);
+    setTimeout(setImage, 2700);
 }
 
-function clickLeft(element){
+function clickLeft(element) {
     console.log("LEFT");
     //First remove btn-focus class from all buttons
-    _(BUTTONS).forEach(function(button){
+    _(BUTTONS).forEach(function (button) {
         console.log(button);
         button.classList.remove("btn-focus");
     });
@@ -60,9 +59,9 @@ function clickLeft(element){
     setPicked(LEFT_CHOICE);
 }
 
-function clickRight(element){
+function clickRight(element) {
     console.log("Right");
-    _(BUTTONS).forEach(function(button){
+    _(BUTTONS).forEach(function (button) {
         console.log(button);
         button.classList.remove("btn-focus");
     });
@@ -71,9 +70,9 @@ function clickRight(element){
     setPicked(RIGHT_CHOICE);
 }
 
-function setUpAnimationEnd(){
+function setUpAnimationEnd() {
     const element = document.getElementById("main-img-container");
-    element.addEventListener("animationend", function(e){
+    element.addEventListener("animationend", function (e) {
         console.log("DONE!");
         e.preventDefault();
 
@@ -91,9 +90,9 @@ function setUpAnimationEnd(){
     });
 }
 
-function setUpAnimationEnd2(){
+function setUpAnimationEnd2() {
     const element = document.getElementById("main-img-container");
-    element.addEventListener("animationend", function (e){
+    element.addEventListener("animationend", function (e) {
         e.preventDefault();
 
         console.log(e.elapsedTime);
@@ -102,19 +101,19 @@ function setUpAnimationEnd2(){
     });
 }
 
-function setImage(){
+function setImage() {
     console.log("...reveal image");
     //todo set the style of the image (transform and scale back to original)
     const img = document.getElementById("main-img");
     img.src = "./assets/right.png"; //not safe
 }
 
-function setPicked(val){
-    if(!_.isNumber(val)){
+function setPicked(val) {
+    if (!_.isNumber(val)) {
         console.error("please enter a number");
-    }else if(!_.contains(VALID_CHOICES, val)){
+    } else if (!_.contains(VALID_CHOICES, val)) {
         console.error("incorrect value specified");
-    }else{
+    } else {
         console.log("Picked: ", val);
         picked = val;
     }
