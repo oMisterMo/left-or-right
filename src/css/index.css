@@ -33,7 +33,7 @@
 }
 
 .title-container {
-    padding: 20px;
+    /*padding: 20px;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,9 +110,7 @@
     bottom: 0;
     right: 0;
     padding: 30px;
-
-
-
+    z-index: 100;   /* Otherwise hover acts funky */
     transition: .1s all linear;
 }
 
@@ -121,9 +119,9 @@
     cursor: pointer;
 }
 
-.fixed-btn-img {
-    box-shadow: -6px 0 30px rgba(13,12,34,.1);
-}
+/*.fixed-btn-img {*/
+/*    box-shadow: -6px 0 30px rgba(13,12,34,.1);*/
+/*}*/
 
 .footer {
     display: flex;
@@ -131,6 +129,8 @@
     bottom: 0;
     padding: 20px 0;
     font-weight: normal;
+    width: 100%;
+    justify-content: center;
 }
 
 /* ************ TEMP BACKGROUNDS ************ */
